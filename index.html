@@ -22,6 +22,10 @@
       h1:hover {
         font-size: 28px;
       }
+      .subtitle {
+        font-size: 16px;
+        color: #666;
+      }
     </style>
     <script type="text/javascript">
       window.onload = function() {
@@ -35,9 +39,12 @@
                 var tag = tags[i];
                 var li = document.createElement('li');
                 var a = document.createElement('a');
-                a.href = tag.link;
+                a.href = 'https://t.me/Picaso3dUnofficial';
                 a.textContent = tag.name;
-                a.onclick = function() { return false; };
+                a.onclick = function(event) {
+                  event.preventDefault();
+                  window.location.href = 'https://t.me/Picaso3dUnofficial';
+                };
                 li.appendChild(a);
                 tagList.appendChild(li);
               }
@@ -66,7 +73,7 @@
     </script>
   </head>
   <body>
-    <h1>Picaso3D Unofficial</h1>
+    <h1>Picaso3D <span class="subtitle">Кто мы?</span></h1>
     <div id="myCanvasContainer">
       <canvas width="500" height="500" id="myCanvas">
         <p>Anything in here will be replaced on browsers that support the canvas element</p>
