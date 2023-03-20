@@ -1,90 +1,106 @@
 [
     {
-        "name": "Дизайн, визуализация ",
-        "link": "fake-link"
+        "name":"Дизайн ",
+        "link":"fake-link"
     },
     {
-        "name": "Кайфую от 3Д печати",
-        "link": "fake-link"
+        "name":"Ведущий инженер АСУТП",
+        "link":"fake-link"
     },
     {
-        "name": "3Д печать и моделирование",
-        "link": "fake-link"
+        "name":"Разработчик CV",
+        "link":"fake-link"
     },
     {
-        "name": "Компьютерные игры",
-        "link": "fake-link"
+        "name":"Предприниматель",
+        "link":"fake-link"
     },
     {
-        "name": "Конструирование",
-        "link": "fake-link"
+        "name":"Владелец небольшого производства",
+        "link":"fake-link"
     },
     {
-        "name": "Ремонт, обслуживание и наладка техники",
-        "link": "fake-link"
+        "name":"Старший специалист Центра прототипирования",
+        "link":"fake-link"
     },
     {
-        "name": "3д печать",
-        "link": "fake-link"
+        "name":"Инженер ",
+        "link":"fake-link"
     },
     {
-        "name": "Рисование",
-        "link": "fake-link"
+        "name":"Тюнинг мото техники ",
+        "link":"fake-link"
     },
     {
-        "name": "Печать для всех нас немного хобби",
-        "link": "fake-link"
+        "name":"Студент",
+        "link":"fake-link"
     },
     {
-        "name": "Изготовление деталей и механизмов",
-        "link": "fake-link"
+        "name":"Программист сетевых решений",
+        "link":"fake-link"
     },
     {
-        "name": "В данный момент 3d печать",
-        "link": "fake-link"
+        "name":"Художник",
+        "link":"fake-link"
     },
     {
-        "name": "Симрейсинг",
-        "link": "fake-link"
+        "name":"Хирург",
+        "link":"fake-link"
     },
     {
-        "name": "Ремонт принтеров",
-        "link": "fake-link"
+        "name":"Руководитель ",
+        "link":"fake-link"
     },
     {
-        "name": "3д",
-        "link": "fake-link"
+        "name":"Специалист по 3D-печати",
+        "link":"fake-link"
     },
     {
-        "name": "автотюнинг",
-        "link": "fake-link"
+        "name":"Инженер-конструктор",
+        "link":"fake-link"
     },
     {
-        "name": "Покупать гаражи ",
-        "link": "fake-link"
+        "name":"Энергетик",
+        "link":"fake-link"
     },
     {
-        "name": "Нету хобби ",
-        "link": "fake-link"
+        "name":"3дэшник",
+        "link":"fake-link"
     },
     {
-        "name": "Моделизм",
-        "link": "fake-link"
+        "name":"робототехник",
+        "link":"fake-link"
     },
     {
-        "name": "Автоспорт",
-        "link": "fake-link"
+        "name":"Продавец гаражей ",
+        "link":"fake-link"
     },
     {
-        "name": "Зд печать, микроконтроллеры, игры",
-        "link": "fake-link"
+        "name":"IT-инженер ",
+        "link":"fake-link"
     },
     {
-        "name": "Путешествия ",
-        "link": "fake-link"
+        "name":"Экономист",
+        "link":"fake-link"
     },
     {
-        "name": "Оружие",
-        "link": "fake-link"
+        "name":"3д дизайнер",
+        "link":"fake-link"
+    },
+    {
+        "name":"Программист",
+        "link":"fake-link"
+    },
+    {
+        "name":"Руководитель проектов ",
+        "link":"fake-link"
+    },
+    {
+        "name":"Зам.генерального директора",
+        "link":"fake-link"
+    },
+    {
+        "name":"Электронщик",
+        "link":"fake-link"
     }
 ]

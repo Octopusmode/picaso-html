@@ -33,15 +33,23 @@
                 li1.appendChild(a1);
                 tagList1.appendChild(li1);
               }
+
               var canvas1 = document.getElementById('myCanvas1');
+              canvas1.addEventListener('wheel', function(e) {
+                e.preventDefault();
+              }, { passive: false });
               canvas1.width = window.innerWidth * 2 / 4;
               canvas1.height = window.innerHeight * 1 / 4;
               TagCanvas.Start('myCanvas1', 'tags1', {
-                textColour: '#ff0000',
+                textColour: '#ffeeff',
                 outlineColour: '#ff00ff',
                 reverse: true,
                 depth: 0.8,
-                maxSpeed: 0.05
+                maxSpeed: 0.03,
+                stretchX: 1,
+                stretchY: 1,
+                scrollPause: null,
+                pinchZoom: false
               });
             }
           };
@@ -67,14 +75,21 @@
                 tagList2.appendChild(li2);
               }
               var canvas2 = document.getElementById('myCanvas2');
+              canvas2.addEventListener('wheel', function(e) {
+                e.preventDefault();
+              }, { passive: false });
               canvas2.width = window.innerWidth * 2 / 4;
               canvas2.height = window.innerHeight * 1 / 4;
               TagCanvas.Start('myCanvas2', 'tags2', {
-                textColour: '#0000ff',
+                textColour: '#ffffee',
                 outlineColour: '#00ffff',
                 reverse: true,
                 depth: 0.8,
-                maxSpeed: 0.05
+                maxSpeed: 0.03,
+                stretchX: 1,
+                stretchY: 1,
+                scrollPause: null,
+                pinchZoom: false
               });
             }
           };
@@ -87,15 +102,13 @@
         }
       };
       window.onresize = function() {
-        var canvas1 = document.getElementById('myCanvas1');
-        canvas1.width = window.innerWidth * 2 / 4;
-        canvas1.height = window.innerHeight * 2 / 1;
-        TagCanvas.Reload('myCanvas1');
-
-        var canvas2 = document.getElementById('myCanvas2');
-        canvas2.width = window.innerWidth * 2 / 3;
-        canvas2.height = window.innerHeight * 1 / 4;
-        TagCanvas.Reload('myCanvas2');
+        var tagCloud = document.querySelector('.tag-cloud');
+        var tagCloudWidth = tagCloud.offsetWidth;
+        var tagCloudItems = tagCloud.querySelectorAll('li');
+        var tagCloudItemWidth = tagCloudItems[0].offsetWidth;
+        var tagCloudItemsPerRow = Math.floor(tagCloudWidth / tagCloudItemWidth);
+        var tagCloudRows = Math.ceil(tagCloudItems.length / tagCloudItemsPerRow);
+        tagCloud.style.height = tagCloudItemWidth * tagCloudRows + 'px';
       };
       document.querySelector('h1').addEventListener('click', function() {
         var canvasContainers = document.querySelectorAll('.canvas-container');
@@ -124,5 +137,10 @@
     <div class="canvas-container" id="canvas-container2">
       <canvas id="myCanvas2"></canvas>
     </div>
+    <span>
+      <a href="https://t.me/Picaso3dUnofficial">
+      <h2>Мы неофициальное сообщество владельцев 3d-притеров Picaso! <br>Присоединяйся!</h2></span>
+      <a>
   </body>
 </html>
+<!-- Автор фонового изображения kjpargeter -->
