@@ -5,6 +5,12 @@
     <title>TagCanvas example</title>
     <!--[if lt IE 9]><script type="text/javascript" src="excanvas.js"></script><![endif]-->
     <script src="tagcanvas.min.js" type="text/javascript"></script>
+    <style>
+      #myCanvasContainer {
+        width: 66.67%;
+        margin: 0 auto;
+      }
+    </style>
     <script type="text/javascript">
       window.onload = function() {
         try {
@@ -19,6 +25,7 @@
                 var a = document.createElement('a');
                 a.href = tag.link;
                 a.textContent = tag.name;
+                a.onclick = function() { return false; };
                 li.appendChild(a);
                 tagList.appendChild(li);
               }
