@@ -9,8 +9,9 @@
       body {
         text-align: center;
       }
-      #myCanvasContainer {
+      .canvas-container {
         width: 66.67%;
+        height: 25%;
         margin: 0 auto;
         transition: all 0.5s ease-in-out;
       }
@@ -31,25 +32,28 @@
     <script type="text/javascript">
       window.onload = function() {
         try {
-          var xhr = new XMLHttpRequest();
-          xhr.onreadystatechange = function() {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-              var tags = JSON.parse(xhr.responseText);
-              var tagList = document.getElementById('tags');
-              for (var i = 0; i < tags.length; i++) {
-                var tag = tags[i];
-                var li = document.createElement('li');
-                var a = document.createElement('a');
-                a.href = 'https://t.me/Picaso3dUnofficial';
-                a.textContent = tag.name;
-                a.onclick = function(event) {
+          var xhr1 = new XMLHttpRequest();
+          xhr1.onreadystatechange = function() {
+            if (xhr1.readyState === 4 && xhr1.status === 200) {
+              var tags1 = JSON.parse(xhr1.responseText);
+              var tagList1 = document.getElementById('tags1');
+              for (var i = 0; i < tags1.length; i++) {
+                var tag1 = tags1[i];
+                var li1 = document.createElement('li');
+                var a1 = document.createElement('a');
+                a1.href = 'https://t.me/Picaso3dUnofficial';
+                a1.textContent = tag1.name;
+                a1.onclick = function(event) {
                   event.preventDefault();
                   window.location.href = 'https://t.me/Picaso3dUnofficial';
                 };
-                li.appendChild(a);
-                tagList.appendChild(li);
+                li1.appendChild(a1);
+                tagList1.appendChild(li1);
               }
-              TagCanvas.Start('myCanvas', 'tags', {
+              var canvas1 = document.getElementById('myCanvas1');
+              canvas1.width = window.innerWidth * 2 / 3;
+              canvas1.height = window.innerHeight * 1 / 4;
+              TagCanvas.Start('myCanvas1', 'tags1', {
                 textColour: '#ff0000',
                 outlineColour: '#ff00ff',
                 reverse: true,
@@ -58,31 +62,82 @@
               });
             }
           };
-          xhr.open('GET', 'tags.json', true);
-          xhr.send();
+          xhr1.open('GET', 'tags1.json', true);
+          xhr1.send();
+
+          var xhr2 = new XMLHttpRequest();
+          xhr2.onreadystatechange = function() {
+            if (xhr2.readyState === 4 && xhr2.status === 200) {
+              var tags2 = JSON.parse(xhr2.responseText);
+              var tagList2 = document.getElementById('tags2');
+              for (var i = 0; i < tags2.length; i++) {
+                var tag2 = tags2[i];
+                var li2 = document.createElement('li');
+                var a2 = document.createElement('a');
+                a2.href = 'https://t.me/Picaso3dUnofficial';
+                a2.textContent = tag2.name;
+                a2.onclick = function(event) {
+                  event.preventDefault();
+                  window.location.href = 'https://t.me/Picaso3dUnofficial';
+                };
+                li2.appendChild(a2);
+                tagList2.appendChild(li2);
+              }
+              var canvas2 = document.getElementById('myCanvas2');
+              canvas2.width = window.innerWidth * 2 / 3;
+              canvas2.height = window.innerHeight * 1 / 4;
+              TagCanvas.Start('myCanvas2', 'tags2', {
+                textColour: '#0000ff',
+                outlineColour: '#00ffff',
+                reverse: true,
+                depth: 0.8,
+                maxSpeed: 0.05
+              });
+            }
+          };
+          xhr2.open('GET', 'tags2.json', true);
+          xhr2.send();
         } catch(e) {
-          // something went wrong, hide the canvas container
-          document.getElementById('myCanvasContainer').style.display = 'none';
+          // something went wrong, hide the canvas containers
+          document.getElementById('canvas-container1').style.display = 'none';
+          document.getElementById('canvas-container2').style.display = 'none';
         }
       };
       window.onresize = function() {
-        TagCanvas.Reload('myCanvas');
+        var canvas1 = document.getElementById('myCanvas1');
+        canvas1.width = window.innerWidth * 2 / 3;
+        canvas1.height = window.innerHeight * 1 / 4;
+        TagCanvas.Reload('myCanvas1');
+
+        var canvas2 = document.getElementById('myCanvas2');
+        canvas2.width = window.innerWidth * 2 / 3;
+        canvas2.height = window.innerHeight * 1 / 4;
+        TagCanvas.Reload('myCanvas2');
       };
       document.querySelector('h1').addEventListener('click', function() {
-        window.location.href = 'https://t.me/Picaso3dUnofficial';
+        var canvasContainers = document.querySelectorAll('.canvas-container');
+        for (var i = 0; i < canvasContainers.length; i++) {
+          var canvasContainer = canvasContainers[i];
+          if (canvasContainer.style.display === 'none') {
+            canvasContainer.style.display = 'block';
+          } else {
+            canvasContainer.style.display = 'none';
+          }
+        }
       });
     </script>
   </head>
   <body>
-    <h1>Сообщество Picaso3D Unofficial<span class="subtitle"><br>Кто мы?</span></h1>
-    <div id="myCanvasContainer">
-      <canvas width="500" height="500" id="myCanvas">
-        <p>Anything in here will be replaced on browsers that support the canvas element</p>
-      </canvas>
+    <h1>Picaso3D Unofficial</h1>
+    <span class="subtitle">Кто мы?</span>
+    <ul id="tags1" style="display: none;"></ul>
+    <div class="canvas-container" id="canvas-container1">
+      <canvas id="myCanvas1"></canvas>
     </div>
-    <div id="tags">
-      <ul>
-      </ul>
+    <span class="subtitle">Чем мы занимаемся?</span>
+    <ul id="tags2" style="display: none;"></ul>
+    <div class="canvas-container" id="canvas-container2">
+      <canvas id="myCanvas2"></canvas>
     </div>
   </body>
 </html>
