@@ -1,22 +1,90 @@
 [
-  {
-    "name": "Попка",
-    "link": "fake-link"
-  },
-  {
-    "name": "Титьки",
-    "link": "fake-link"
-  },
-  {
-    "name": "Chips",
-    "link": "fake-link"
-  },
-  {
-    "name": "Salt",
-    "link": "fake-link"
-  },
-  {
-    "name": "Vinegar",
-    "link": "fake-link"
-  }
+    {
+        "name": "Дизайн, визуализация ",
+        "link": "fake-link"
+    },
+    {
+        "name": "Кайфую от 3Д печати",
+        "link": "fake-link"
+    },
+    {
+        "name": "3Д печать и моделирование",
+        "link": "fake-link"
+    },
+    {
+        "name": "Компьютерные игры",
+        "link": "fake-link"
+    },
+    {
+        "name": "Конструирование",
+        "link": "fake-link"
+    },
+    {
+        "name": "Ремонт, обслуживание и наладка техники",
+        "link": "fake-link"
+    },
+    {
+        "name": "3д печать",
+        "link": "fake-link"
+    },
+    {
+        "name": "Рисование",
+        "link": "fake-link"
+    },
+    {
+        "name": "Печать для всех нас немного хобби",
+        "link": "fake-link"
+    },
+    {
+        "name": "Изготовление деталей и механизмов",
+        "link": "fake-link"
+    },
+    {
+        "name": "В данный момент 3d печать",
+        "link": "fake-link"
+    },
+    {
+        "name": "Симрейсинг",
+        "link": "fake-link"
+    },
+    {
+        "name": "Ремонт принтеров",
+        "link": "fake-link"
+    },
+    {
+        "name": "3д",
+        "link": "fake-link"
+    },
+    {
+        "name": "автотюнинг",
+        "link": "fake-link"
+    },
+    {
+        "name": "Покупать гаражи ",
+        "link": "fake-link"
+    },
+    {
+        "name": "Нету хобби ",
+        "link": "fake-link"
+    },
+    {
+        "name": "Моделизм",
+        "link": "fake-link"
+    },
+    {
+        "name": "Автоспорт",
+        "link": "fake-link"
+    },
+    {
+        "name": "Зд печать, микроконтроллеры, игры",
+        "link": "fake-link"
+    },
+    {
+        "name": "Путешествия ",
+        "link": "fake-link"
+    },
+    {
+        "name": "Оружие",
+        "link": "fake-link"
+    }
 ]

@@ -4,14 +4,19 @@ import json
 hobbies = []
 jobs = []
 
-with open('answers.csv', newline='') as csvfile:
+with open('answers.csv', newline='', encoding='utf-8') as csvfile:
     reader = csv.DictReader(csvfile)
     for row in reader:
-        hobbies.append(row['hobby'])
-        jobs.append(row['job'])
+        if row['hobby']:
+            hobbies.append(row['hobby'])
+        if row['job']:
+            jobs.append(row['job'])
 
-with open('tags1.json', 'w') as outfile:
-    json.dump(hobbies, outfile)
+tags1 = [{"name": hobby, "link": "fake-link"} for hobby in hobbies]
+tags2 = [{"name": job, "link": "fake-link"} for job in jobs]
 
-with open('tags2.json', 'w') as outfile:
-    json.dump(jobs, outfile)
+with open('tags1.json', 'w', encoding='utf-8') as outfile:
+    json.dump(tags1, outfile, indent=4, ensure_ascii=False, separators=(',', ':'))
+
+with open('tags2.json', 'w', encoding='utf-8') as outfile:
+    json.dump(tags2, outfile, indent=4, ensure_ascii=False, separators=(',', ':'))

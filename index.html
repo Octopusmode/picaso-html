@@ -23,10 +23,19 @@
       h1:hover {
         font-size: 28px;
       }
+      h2 {
+        margin-top: 10px;
+      }
       .subtitle {
-        font-size: 16px;
+        font-size: 20px;
         color: #666;
         display: block;
+        transition: all 0.5s ease-in-out;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+      .subtitle:hover {
+        font-size: 26px;
       }
     </style>
     <script type="text/javascript">
@@ -84,8 +93,8 @@
                 tagList2.appendChild(li2);
               }
               var canvas2 = document.getElementById('myCanvas2');
-              canvas2.width = window.innerWidth * 2 / 3;
-              canvas2.height = window.innerHeight * 1 / 4;
+              canvas2.width = window.innerWidth * 2 / 4;
+              canvas2.height = window.innerHeight * 1 / 3;
               TagCanvas.Start('myCanvas2', 'tags2', {
                 textColour: '#0000ff',
                 outlineColour: '#00ffff',
@@ -105,8 +114,8 @@
       };
       window.onresize = function() {
         var canvas1 = document.getElementById('myCanvas1');
-        canvas1.width = window.innerWidth * 2 / 3;
-        canvas1.height = window.innerHeight * 1 / 4;
+        canvas1.width = window.innerWidth * 2 / 4;
+        canvas1.height = window.innerHeight * 2 / 1;
         TagCanvas.Reload('myCanvas1');
 
         var canvas2 = document.getElementById('myCanvas2');
@@ -134,7 +143,7 @@
     <div class="canvas-container" id="canvas-container1">
       <canvas id="myCanvas1"></canvas>
     </div>
-    <span class="subtitle">Чем мы занимаемся?</span>
+    <span class="subtitle">Чем мы увлекаемся?</span>
     <ul id="tags2" style="display: none;"></ul>
     <div class="canvas-container" id="canvas-container2">
       <canvas id="myCanvas2"></canvas>

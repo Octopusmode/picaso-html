@@ -1,22 +1,106 @@
 [
     {
-      "name": "Пук",
-      "link": "fake-link"
+        "name": "Дизайн ",
+        "link": "fake-link"
     },
     {
-      "name": "Жмяк",
-      "link": "fake-link"
+        "name": "Ведущий инженер АСУТП",
+        "link": "fake-link"
     },
     {
-      "name": "Хуяк",
-      "link": "fake-link"
+        "name": "Разработчик CV",
+        "link": "fake-link"
     },
     {
-      "name": "Пиздык",
-      "link": "fake-link"
+        "name": "Предприниматель",
+        "link": "fake-link"
     },
     {
-      "name": "Пепе",
-      "link": "fake-link"
+        "name": "Владелец небольшого производства",
+        "link": "fake-link"
+    },
+    {
+        "name": "Старший специалист Центра прототипирования",
+        "link": "fake-link"
+    },
+    {
+        "name": "Инженер ",
+        "link": "fake-link"
+    },
+    {
+        "name": "Тюнинг мото техники ",
+        "link": "fake-link"
+    },
+    {
+        "name": "Студент",
+        "link": "fake-link"
+    },
+    {
+        "name": "Программист сетевых решений",
+        "link": "fake-link"
+    },
+    {
+        "name": "Художник",
+        "link": "fake-link"
+    },
+    {
+        "name": "Хирург",
+        "link": "fake-link"
+    },
+    {
+        "name": "Руководитель ",
+        "link": "fake-link"
+    },
+    {
+        "name": "Специалист по 3D-печати",
+        "link": "fake-link"
+    },
+    {
+        "name": "Инженер-конструктор",
+        "link": "fake-link"
+    },
+    {
+        "name": "Энергетик",
+        "link": "fake-link"
+    },
+    {
+        "name": "3дэшник",
+        "link": "fake-link"
+    },
+    {
+        "name": "робототехник",
+        "link": "fake-link"
+    },
+    {
+        "name": "Продавец гаражей ",
+        "link": "fake-link"
+    },
+    {
+        "name": "IT-инженер ",
+        "link": "fake-link"
+    },
+    {
+        "name": "Экономист",
+        "link": "fake-link"
+    },
+    {
+        "name": "3д дизайнер",
+        "link": "fake-link"
+    },
+    {
+        "name": "Программист",
+        "link": "fake-link"
+    },
+    {
+        "name": "Руководитель проектов ",
+        "link": "fake-link"
+    },
+    {
+        "name": "Зам.генерального директора",
+        "link": "fake-link"
+    },
+    {
+        "name": "Электронщик",
+        "link": "fake-link"
     }
-  ]
+]
