@@ -1,9 +1,22 @@
-{
-  "tags": [
-    {"tag": "Попка", "url": "http://www.google.com"},
-    {"tag": "Fish", "url": "/fish"},
-    {"tag": "Chips", "url": "/chips"},
-    {"tag": "Salt", "url": "/salt"},
-    {"tag": "Vinegar", "url": "/vinegar"}
-  ]
-}
+[
+  {
+    "name": "Попка",
+    "link": "fake-link"
+  },
+  {
+    "name": "Титьки",
+    "link": "fake-link"
+  },
+  {
+    "name": "Chips",
+    "link": "fake-link"
+  },
+  {
+    "name": "Salt",
+    "link": "fake-link"
+  },
+  {
+    "name": "Vinegar",
+    "link": "fake-link"
+  }
+]

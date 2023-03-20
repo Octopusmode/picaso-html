@@ -8,13 +8,31 @@
     <script type="text/javascript">
       window.onload = function() {
         try {
-          TagCanvas.Start('myCanvas','tags',{
-            textColour: '#ff0000',
-            outlineColour: '#ff00ff',
-            reverse: true,
-            depth: 0.8,
-            maxSpeed: 0.05
-          });
+          var xhr = new XMLHttpRequest();
+          xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+              var tags = JSON.parse(xhr.responseText);
+              var tagList = document.getElementById('tags');
+              for (var i = 0; i < tags.length; i++) {
+                var tag = tags[i];
+                var li = document.createElement('li');
+                var a = document.createElement('a');
+                a.href = tag.link;
+                a.textContent = tag.name;
+                li.appendChild(a);
+                tagList.appendChild(li);
+              }
+              TagCanvas.Start('myCanvas', 'tags', {
+                textColour: '#ff0000',
+                outlineColour: '#ff00ff',
+                reverse: true,
+                depth: 0.8,
+                maxSpeed: 0.05
+              });
+            }
+          };
+          xhr.open('GET', 'tags.json', true);
+          xhr.send();
         } catch(e) {
           // something went wrong, hide the canvas container
           document.getElementById('myCanvasContainer').style.display = 'none';
@@ -31,11 +49,6 @@
     </div>
     <div id="tags">
       <ul>
-        <li><a href="fake-link">Попка</a></li>
-        <li><a href="fake-link">Fish</a></li>
-        <li><a href="fake-link">Chips</a></li>
-        <li><a href="fake-link">Salt</a></li>
-        <li><a href="fake-link">Vinegar</a></li>
       </ul>
     </div>
   </body>
