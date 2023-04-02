@@ -110,6 +110,14 @@
         var tagCloudRows = Math.ceil(tagCloudItems.length / tagCloudItemsPerRow);
         tagCloud.style.height = tagCloudItemWidth * tagCloudRows + 'px';
       };
+
+      // Обновление позиции фона при прокрутке страницы
+      window.addEventListener('scroll', function() {
+        const parallax = document.querySelector('.parallax');
+        let scrollPosition = window.pageYOffset;
+        parallax.style.backgroundPositionY = scrollPosition * 0.7 + 'px';
+      });
+
       document.querySelector('h1').addEventListener('click', function() {
         var canvasContainers = document.querySelectorAll('.canvas-container');
         for (var i = 0; i < canvasContainers.length; i++) {
@@ -124,23 +132,27 @@
     </script>
   </head>
   <body>
-    <a href="https://t.me/Picaso3dUnofficial">
-      <h1>Picaso3D Unofficial</h1>
-    </a>
-    <span class="subtitle">Кто мы?</span>
-    <ul id="tags1" style="display: none;"></ul>
-    <div class="canvas-container" id="canvas-container1">
-      <canvas id="myCanvas1"></canvas>
+    <div class="parallax">
+      <div class="parallax-inner">
+        <a href="https://t.me/Picaso3dUnofficial">
+          <h1>Picaso3D Unofficial</h1>
+        </a>
+        <span class="subtitle">Кто мы?</span>
+        <ul id="tags1" style="display: none;"></ul>
+        <div class="canvas-container" id="canvas-container1">
+          <canvas id="myCanvas1"></canvas>
+        </div>
+        <span class="subtitle">Чем мы увлекаемся?</span>
+        <ul id="tags2" style="display: none;"></ul>
+        <div class="canvas-container" id="canvas-container2">
+          <canvas id="myCanvas2"></canvas>
+        </div>
+        <span>
+          <a href="https://t.me/Picaso3dUnofficial">
+          <h2>Мы неофициальное сообщество владельцев 3d-притеров Picaso! <br>Присоединяйся!</h2></span>
+          <a>
+      </div>
     </div>
-    <span class="subtitle">Чем мы увлекаемся?</span>
-    <ul id="tags2" style="display: none;"></ul>
-    <div class="canvas-container" id="canvas-container2">
-      <canvas id="myCanvas2"></canvas>
-    </div>
-    <span>
-      <a href="https://t.me/Picaso3dUnofficial">
-      <h2>Мы неофициальное сообщество владельцев 3d-притеров Picaso! <br>Присоединяйся!</h2></span>
-      <a>
   </body>
 </html>
 <!-- Автор фонового изображения kjpargeter -->
